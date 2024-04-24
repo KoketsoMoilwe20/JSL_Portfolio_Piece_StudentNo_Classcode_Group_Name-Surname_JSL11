@@ -25,19 +25,24 @@ initializeData()
 const elements = {
 //Main Layout Elements:
 
+header: document.getElementById("header"),
 headerBoardName: document.getElementById("header-board-name"),
 addNewTaskBtn: document.getElementById("add-new-task-btn"),
-editBtn: document.getElementById("edit-board-btn"),
+editBoardBtn: document.getElementById("edit-board-btn"),
 dropDownBtn: document.getElementById("dropdownBtn"),
 deleteBoardBtn: document.getElementById("deleteBoardBtn"),
+
+
 
 //Sidebar
 sideBar: document.querySelector(".side-bar"),
 sideLogoDiv: document.getElementById("side-logo-div"),
+sideBarDiv: document.getElementById('side-bar-div'),
 headlineSidepanel: document.getElementById("headline-sidepanel"),
 hideSideBarBtn: document.getElementById("hide-side-bar-btn"),
 showSideBarBtn: document.getElementById("show-side-bard-btn"),
 themeSwitch: document.getElementById("switch"),
+boardsNavLinksDiv: document.getElementById('boards-nav-links-div'),
 
 //Task Columns
 columnDivs: document.querySelector(".column-div"),
@@ -48,12 +53,17 @@ modalWindow: document.getElementById("new-task-modal-window"),
 titleInput: document.getElementById("title-input"),
 
 //Edit Task Modal
-modalWindow: document.querySelector(".edit-task-modal-window"),
+editTaskModal: document.querySelector('.edit-task-modal-window'),
 editTaskForm: document.getElementById("edit-task-form"),
 editTaskFormInput: document.getElementById("edit-task-desc-input"),
+editTaskTitleInput: document.getElementById('edit-task-title-input'),
+editTaskDescInput: document.getElementById('edit-task-desc-input'),
+editSelectStatus: document.getElementById('edit-select-status'),
 saveTaskChanges: document.getElementById("save-task-changes-btn"),
 cancelEditBtn: document.getElementById("cancel-edit-btn"),
 deleteTask: document.getElementById("delete-task-btn"),
+
+//Filter Div
 filterDiv: document.getElementById("filterDiv"),
 
 
@@ -223,6 +233,10 @@ function toggleModal(show, modal = elements.modalWindow) {
   modal.style.display = show ? 'block' : 'none'; 
 }
 
+//Side bar nav links styling:
+elements.boardsNavLinksDiv.style.marginTop = "2.5rem";
+elements.boardsNavLinksDiv.style.marginBottom = "17rem";
+
 /*************************************************************************************************************************************************
  * COMPLETE FUNCTION CODE
  * **********************************************************************************************************************************************/
@@ -232,7 +246,11 @@ function addTask(event) {
 
   //Assign user input to the task object
     const task = {
-      
+      "id": task_id,
+      "title": titleInput,
+      "description": descriptionInput,
+      "status": selectStatus,
+      "board": activeBoard
     };
     const newTask = createNewTask(task);
     if (newTask) {
