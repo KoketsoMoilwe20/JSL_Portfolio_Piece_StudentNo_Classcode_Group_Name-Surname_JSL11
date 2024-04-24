@@ -245,6 +245,11 @@ function addTask(event) {
   event.preventDefault(); 
 
   //Assign user input to the task object
+    const task_id = JSON.parse(localStorage.getItem('id'));
+    const titleInput = elements.titleInput.value;
+    const descriptionInput = elements.descInput.value;
+    const selectStatus = elements.selectStatus.value;
+
     const task = {
       "id": task_id,
       "title": titleInput,
@@ -260,6 +265,7 @@ function addTask(event) {
       event.target.reset();
       refreshTasksUI();
     }
+    location.reload();
 }
 
 
@@ -272,6 +278,14 @@ function toggleSidebar(show) {
     elements.sideBar.style.display = 'none';
   }
 }
+
+// Get the current mode from local storage or set to default (light)
+const currentMode = localStorage.getItem('mode') || 'light';
+let isLightMode = currentMode === 'light';
+
+// Set the initial SVG source based on the current mode
+let sideLogoDivSrc = isLightMode ? './assets/logo-dark.svg' : './assets/logo-light.svg';
+elements.sideLogoDiv.src = sideLogoDivSrc;
 
 function toggleTheme() {
   document.body.classList.toggle('light-theme');
