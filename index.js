@@ -31,6 +31,13 @@ dropDownBtn: document.getElementById("dropdownBtn"),
 deleteBoardBtn: document.getElementById("deleteBoardBtn"),
 
 //Sidebar
+sideBar: document.querySelector(".side-bar"),
+sideLogoDiv: document.getElementById("side-logo-div"),
+headlineSidepanel: document.getElementById("headline-sidepanel"),
+hideSideBarBtn: document.getElementById("hide-side-bar-btn"),
+showSideBarBtn: document.getElementById("show-side-bard-btn"),
+themeSwitch: document.getElementById("switch"),
+
 
 
 }
