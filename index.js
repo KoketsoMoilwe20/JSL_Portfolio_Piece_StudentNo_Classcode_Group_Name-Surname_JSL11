@@ -243,7 +243,13 @@ function addTask(event) {
 
 
 function toggleSidebar(show) {
- 
+  if(show) {
+    elements.showSideBarBtn.style.display = 'none';
+    elements.sideBar.style.display = 'block';
+  } else {
+    elements.addNewTaskBtn.showSideBarBtn.style.display = 'block';
+    elements.sideBar.style.display = 'none';
+  }
 }
 
 function toggleTheme() {
