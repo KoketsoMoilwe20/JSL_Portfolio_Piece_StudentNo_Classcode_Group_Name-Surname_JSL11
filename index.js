@@ -288,7 +288,15 @@ let sideLogoDivSrc = isLightMode ? './assets/logo-dark.svg' : './assets/logo-lig
 elements.sideLogoDiv.src = sideLogoDivSrc;
 
 function toggleTheme() {
+  const isLightTheme = document.body.classList.toggle('light-theme');
   document.body.classList.toggle('light-theme');
+  localStorage.setItem('light-theme', !isLightTheme ? 'enabled' : 'disabled');
+
+  isLightMode = !isLightMode; // Toggle the mode
+  sideLogoDivSrc = isLightMode ? './assets/logo-dark.svg' : './assets/logo-light.svg';
+  elements.sideLogoDiv.src = sideLogoDivSrc;
+  localStorage.setItem('mode', isLightMode ? 'light' : 'dark'); // Store the selected mode in localStorage
+  localStorage.setItem('sideLogoDiv', sideLogoDivSrc); // Store the selected SVG source in localStorage
 }
 
 
@@ -298,7 +306,8 @@ function openEditTaskModal(task) {
   const modal = document.getElementById('editTaskModal');
 
   // Get button elements from the task modal
-  const 
+  const saveChangesBtn = document.getElementById('save-task-changes-btn');
+  const deleteTaskBtn = document.getElementById('delete-task-btn');
 
   // Call saveTaskChanges upon click of Save Changes button
  
