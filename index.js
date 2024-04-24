@@ -1,10 +1,10 @@
 // TASK: import helper functions from utils
 
-import {getTasks, saveTasks, createNewTask, patchTask, putTask, deleteTask} from '/utils/taskFunctions'
+import {getTasks, saveTasks, createNewTask, patchTask, putTask, deleteTask} from '/utils/taskFunctions.js'
 
 // TASK: import initialData
 
-import * as initialData from '/initialData'
+import * as initialData from '/initialData.js'
 
 /*************************************************************************************************************************************************
  * FIX BUGS!!!
@@ -22,6 +22,10 @@ function initializeData() {
 
 // TASK: Get elements from the DOM
 const elements = {
+
+  headerBoardName = documents.getElementsByClassName("header-name-div"),
+  columnDivs = documents.getElementsByClassName("column-div"),
+  editTaskModal = 
 
 }
 
