@@ -46,6 +46,16 @@ tasksContainer: document.querySelector(".tasks-container"),
 modalWindow: document.getElementById("new-task-modal-window"),
 titleInput: document.getElementById("title-input"),
 
+//Edit Task Modal
+modalWindow: document.querySelector(".edit-task-modal-window"),
+editTaskForm: document.getElementById("edit-task-form"),
+editTaskFormInput: document.getElementById("edit-task-desc-input"),
+saveTaskChanges: document.getElementById("save-task-changes-btn"),
+cancelEditBtn: document.getElementById("cancel-edit-btn"),
+deleteTask: document.getElementById("delete-task-btn"),
+filterDiv: document.getElementById("filterDiv"),
+
+
 }
 
 let activeBoard = ""
