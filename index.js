@@ -369,6 +369,9 @@ const displayStoredTasks = () => {
   }
 }
 
+// Calling the function to display the stored tasks
+displayStoredTasks();
+
 /*************************************************************************************************************************************************/
 
 document.addEventListener('DOMContentLoaded', function() {
