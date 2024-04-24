@@ -24,10 +24,14 @@ function initializeData() {
 const elements = {
 //Main Layout Elements:
 
+headerBoardName: document.getElementById("header-board-name"),
 addNewTaskBtn: document.getElementById("add-new-task-btn"),
 editBtn: document.getElementById("edit-board-btn"),
 dropDownBtn: document.getElementById("dropdownBtn"),
-deleteBoardBtn: document.getElementById("deleteBoardBtn")
+deleteBoardBtn: document.getElementById("deleteBoardBtn"),
+
+//Sidebar
+
 
 }
 
