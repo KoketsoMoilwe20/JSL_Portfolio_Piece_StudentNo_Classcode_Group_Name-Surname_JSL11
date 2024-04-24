@@ -42,6 +42,9 @@ themeSwitch: document.getElementById("switch"),
 columnDivs: document.querySelector(".column-div"),
 tasksContainer: document.querySelector(".tasks-container"),
 
+//New Task Modal
+modalWindow: document.getElementById("new-task-modal-window"),
+titleInput: document.getElementById("title-input"),
 
 }
 
