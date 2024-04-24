@@ -260,7 +260,7 @@ function toggleTheme() {
 
 function openEditTaskModal(task) {
   // Set task details in modal inputs
-  
+  const modal = document.getElementById('editTaskModal');
 
   // Get button elements from the task modal
 
