@@ -38,6 +38,9 @@ hideSideBarBtn: document.getElementById("hide-side-bar-btn"),
 showSideBarBtn: document.getElementById("show-side-bard-btn"),
 themeSwitch: document.getElementById("switch"),
 
+//Task Columns
+columnDivs: document.querySelector(".column-div"),
+tasksContainer: document.querySelector(".tasks-container"),
 
 
 }
