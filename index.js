@@ -22,10 +22,12 @@ function initializeData() {
 
 // TASK: Get elements from the DOM
 const elements = {
+//Main Layout Elements:
 
-  headerBoardName = documents.getElementsByClassName("header-name-div"),
-  columnDivs = documents.getElementsByClassName("column-div"),
-  editTaskModal = 
+addNewTaskBtn: document.getElementById("add-new-task-btn"),
+editBtn: document.getElementById("edit-board-btn"),
+dropDownBtn: document.getElementById("dropdownBtn"),
+deleteBoardBtn: document.getElementById("deleteBoardBtn")
 
 }
 
